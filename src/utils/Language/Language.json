@@ -1,0 +1,30 @@
+{
+  "Title_Payment": {
+    "en": "Payment",
+    "bn": "পেমেন্ট"
+  },
+  "Title_Cashout": {
+    "en": "Cashout",
+    "bn": "ক্যাশআউট"
+  },
+  "Button_QR_Scan": {
+    "en": "QR CODE Scan",
+    "bn": "QR CODE স্ক্যান করুন"
+  },
+  "Message_No_Request": {
+    "en": "No Request",
+    "bn": "কোন রিকুয়েস্ট নেই"
+  },
+  "Button_Cashout": {
+    "en": "Cashout",
+    "bn": "ক্যাশআউট করুন"
+  },
+  "Text_Reciever": {
+    "en": "Reciever",
+    "bn": "প্রাপক"
+  },
+  "Text_Amount": {
+    "en": "Amount",
+    "bn": "টাকার পরিমান"
+  }
+}
