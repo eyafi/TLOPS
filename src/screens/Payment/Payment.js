@@ -9,7 +9,8 @@ import TransparentButton from '../../component/Buttons/TransparentButton';
 const Payment = ({ navigation }) => {
   const [value, setValue] = useState('');
 
-  const navigateToCashOut = () => {
+  const handleButtonPress = () => {
+    if (value.length < 11) return alert('নাম্বার দিন ');
     navigation.navigate('Cashout');
   }
 
@@ -35,7 +36,7 @@ const Payment = ({ navigation }) => {
         <Text style={Styles.noReqMsg}>{i18n.i18n("Message_No_Request")}</Text>
         <TransparentButton
           title={i18n.i18n("Button_Cashout")}
-          onPress={navigateToCashOut}
+          onPress={handleButtonPress}
         />
       </View>
 
@@ -49,6 +50,7 @@ const Styles = StyleSheet.create({
   container: {
     width: '100%',
     flex: 1,
+    backgroundColor: '#FFFFFF',
   },
   qrButtonParent: {
     borderTopWidth: 1,

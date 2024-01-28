@@ -12,6 +12,7 @@ const PaymentNumberInput = ({
       <TextInput
         style={Styles.input}
         inputMode='numeric'
+        value={value}
         onChangeText={setValue}
       />
       <TouchableOpacity onPress={onPressIcon}>

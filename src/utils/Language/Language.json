@@ -19,6 +19,14 @@
     "en": "Cashout",
     "bn": "ক্যাশআউট করুন"
   },
+  "Button_Title_Go": {
+    "en": "Go Ahead",
+    "bn": "এগিয়ে যান"
+  },
+  "Button_Title_OK": {
+    "en": "Ok",
+    "bn": "ঠিক আছে"
+  },
   "Text_Reciever": {
     "en": "Reciever",
     "bn": "প্রাপক"
@@ -26,5 +34,33 @@
   "Text_Amount": {
     "en": "Amount",
     "bn": "টাকার পরিমান"
+  },
+  "Text_Reciever_Option_Title": {
+    "en": "Who will take the money from the service point?",
+    "bn": "সার্ভিস পয়েন্ট থেকে টাকা কে তুলবে?"
+  },
+  "Text_Success": {
+    "en": "Success",
+    "bn": "সফল হয়েছে"
+  },
+  "Text_Request": {
+    "en": "Request",
+    "bn": "রিকুয়েস্ট"
+  },
+  "Receiver_Option_Owner": {
+    "en": "Owner",
+    "bn": "মালিক নিজে"
+  },
+  "Receiver_Option_Others": {
+    "en": "Other Person",
+    "bn": "অন্য কেউ "
+  },
+  "Input_Label_Receiver_Number": {
+    "en": "Receiver's Phone Number",
+    "bn": "গ্রাহকের মোবাইল নাম্বার"
+  },
+  "Input_Label_Receiver_Name": {
+    "en": "Receiver's Name",
+    "bn": "গ্রাহকের নাম"
   }
 }
