@@ -5,7 +5,7 @@ import RightAngBrace from '../../assets/svg/RightAngBrace';
 const PaymentNumberInput = ({
   value,
   setValue,
-  onPressIcon
+  onPressIcon,
 }) => {
   return (
     <View style={Styles.inputContainer}>
@@ -15,10 +15,10 @@ const PaymentNumberInput = ({
         value={value}
         onChangeText={setValue}
       />
-      <TouchableOpacity onPress={onPressIcon}>
-        <View style={[Styles.rightIcon, { backgroundColor: value.length < 11 ? '#E0E0E0' : '#4285F4' }]}>
-          <RightAngBrace />
-        </View>
+      <TouchableOpacity
+        style={[Styles.rightIcon, { backgroundColor: value.length < 11 ? '#E0E0E0' : '#4285F4' }]}
+        onPress={onPressIcon}>
+        <RightAngBrace />
       </TouchableOpacity>
     </View>
   );
@@ -38,7 +38,8 @@ const Styles = StyleSheet.create({
   input: {
     height: 40,
     width: '93%',
-    fontWeight: '700'
+    fontWeight: '700',
+    color: '#000'
   },
 
   rightIcon: {

@@ -24,12 +24,9 @@ const BottomSuccessModal = ({
       <TouchableWithoutFeedback onPress={closeModal}>
         <View style={[styles.modal]} >
           <View style={[styles.modalContent]}>
-
-            <View style={{ alignItems: 'center' }}>
-              <Image source={Success} />
-              <Text style={styles.title}>{i18n.i18n('Text_Success')}</Text>
-              <Text style={styles.text}>একাউন্ট ০১৮২৯১৯৩৬৩৭ থেকে ৫০০ টাকা উত্তোলন রিকুয়েস্ট সফল হয়েছে</Text>
-            </View>
+            <Image source={Success} />
+            <Text style={styles.title}>{i18n.i18n('Text_Success')}</Text>
+            <Text style={styles.text}>একাউন্ট ০১৮২৯১৯৩৬৩৭ থেকে ৫০০ টাকা উত্তোলন রিকুয়েস্ট সফল হয়েছে</Text>
 
             <FilledButton
               title={i18n.i18n('Button_Title_OK')}
@@ -62,6 +59,7 @@ const styles = StyleSheet.create({
     borderTopLeftRadius: 10,
     borderTopRightRadius: 10,
     position: 'relative',
+    alignItems: 'center'
   },
 
   title: {

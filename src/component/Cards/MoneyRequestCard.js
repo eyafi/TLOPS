@@ -11,10 +11,8 @@ const MoneyRequestCard = () => {
         <Text style={Styles.date}>31 Oct - 08:00 PM </Text>
       </View>
 
-      <View style={{ justifyContent: 'space-between' }}>
-        <View style={{ alignItems: 'flex-end' }}>
-          <ThreeDot />
-        </View>
+      <View style={{ justifyContent: 'space-between', alignItems: 'flex-end' }}>
+        <ThreeDot />
         <TouchableOpacity style={Styles.button}>
           <Text style={Styles.buttonText}>
             SEND TOKEN

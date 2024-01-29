@@ -19,7 +19,7 @@ const LabelOverflowenInput = ({
           value={value}
           onChangeText={setValue}
           inputMode={input}
-          style={[{ padding: 0 }, inputStyle]}
+          style={[{ padding: 0, color: '#000' }, inputStyle]}
         />
       </View>
       {showErrorMessage && <Text style={{ color: '#F9453F', marginLeft: 10, marginTop: 5 }}>{errorMessage}</Text>}

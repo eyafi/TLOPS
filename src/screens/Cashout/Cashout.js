@@ -45,6 +45,7 @@ const Cashout = ({
                   style={[{ color: disabled ? '#808080' : '#4285F4', }, Styles.amountText]}
                   inputMode='numeric'
                   placeholder='0'
+                  placeholderTextColor={'#808080'}
                   value={amount}
                   onChangeText={(text) => setAmount(text.replace(/^0*/, ''))}
                 />

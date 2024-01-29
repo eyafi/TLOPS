@@ -37,7 +37,6 @@ const PaymentRequest = ({ navigation, route }) => {
         }
 
       </View>
-
     </View>
   );
 };

@@ -87,15 +87,14 @@ const CashoutForm = ({
       <View style={{ marginVertical: 20, marginHorizontal: 10 }}>
         {
           MoneyReceiverOptions.map((item, index) => (
-            <View key={index} style={{ marginBottom: index == 0 ? 10 : 0 }}>
-              <TouchableOpacity
-                onPress={() => toggleSelectedOption(item.idx)}
-                style={Styles.options}
-              >
-                {checkIfSelected(item.idx) ? <RadioFilled /> : <RadioEmpty />}
-                <Text style={{ color: '#000', fontSize: 16 }}>{i18n.i18n(item.option)}</Text>
-              </TouchableOpacity>
-            </View>
+            <TouchableOpacity
+              key={index}
+              onPress={() => toggleSelectedOption(item.idx)}
+              style={[Styles.options, { marginBottom: index == 0 ? 10 : 0 }]}
+            >
+              {checkIfSelected(item.idx) ? <RadioFilled /> : <RadioEmpty />}
+              <Text style={{ color: '#000', fontSize: 16 }}>{i18n.i18n(item.option)}</Text>
+            </TouchableOpacity>
           ))
         }
       </View>
@@ -105,32 +104,30 @@ const CashoutForm = ({
   return (
     <DismissKeyboard>
       <View style={Styles.container}>
-        <View>
-          <Header
-            title={i18n.i18n('Title_Cashout')}
-            onpressBack={() => navigation.goBack()}
-          />
+        <Header
+          title={i18n.i18n('Title_Cashout')}
+          onpressBack={() => navigation.goBack()}
+        />
 
-          <View style={Styles.topContainer}>
-            <View>
-              <Text style={{ color: '#808080' }}>{i18n.i18n('Text_Reciever')}</Text>
-              <Text style={Styles.normalText}>01743620841</Text>
-            </View>
-            <Text style={[Styles.normalText, { fontSize: 16 }]}>৳ {amount}</Text>
+        <View style={Styles.topContainer}>
+          <View>
+            <Text style={{ color: '#808080' }}>{i18n.i18n('Text_Reciever')}</Text>
+            <Text style={Styles.normalText}>01743620841</Text>
           </View>
-
-          <View style={Styles.formParent}>
-            <Text style={Styles.optionTitle}>{i18n.i18n('Text_Reciever_Option_Title')}</Text>
-            {renderOptions()}
-            {showForm && renderForm()}
-
-            <FilledButton
-              title={i18n.i18n('Button_Title_Go')}
-              onPress={handleSubmit}
-            />
-          </View>
-
+          <Text style={[Styles.normalText, { fontSize: 16 }]}>৳ {amount}</Text>
         </View>
+
+        <View style={Styles.formParent}>
+          <Text style={Styles.optionTitle}>{i18n.i18n('Text_Reciever_Option_Title')}</Text>
+          {renderOptions()}
+          {showForm && renderForm()}
+
+          <FilledButton
+            title={i18n.i18n('Button_Title_Go')}
+            onPress={handleSubmit}
+          />
+        </View>
+
       </View>
     </DismissKeyboard>
   );
@@ -143,8 +140,6 @@ const Styles = StyleSheet.create({
     width: '100%',
     flex: 1,
     backgroundColor: '#FFFFFF',
-    // borderWidth: 10
-    justifyContent: 'space-between',
   },
 
   topContainer: {

@@ -11,16 +11,10 @@ const Header = ({
 }) => {
   return (
     <View style={[Styles.container, containerStyle]}>
-
-      <TouchableOpacity onPress={onpressBack}>
-        <View style={Styles.leftside}>
-          <BackIcon />
-        </View>
+      <TouchableOpacity style={Styles.leftside} onPress={onpressBack}>
+        <BackIcon />
       </TouchableOpacity>
-      <View style={[Styles.middleside,]}>
-        <Text style={[Styles.header, titleStyle]}>{title}</Text>
-      </View>
-
+      <Text style={[Styles.header, titleStyle]}>{title}</Text>
     </View>
   );
 };
@@ -38,12 +32,7 @@ const Styles = StyleSheet.create({
   leftside: {
     justifyContent: 'center',
     alignItems: 'center',
-    // flex:50,
     width: 60,
-  },
-  middleside: {
-    justifyContent: 'center',
-    flex: 250,
   },
   header: {
     color: '#fff',

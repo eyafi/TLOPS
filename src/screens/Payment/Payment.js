@@ -39,7 +39,6 @@ const Payment = ({ navigation }) => {
           onPress={handleButtonPress}
         />
       </View>
-
     </View>
   );
 };
