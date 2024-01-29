@@ -25,31 +25,28 @@ const Cashout = ({
     <AvoidKeyboard>
       <DismissKeyboard>
         <View style={Styles.container}>
+          <Header
+            title={i18n.i18n('Title_Cashout')}
+            onpressBack={() => navigation.goBack()}
+          />
 
-          <View>
-            <Header
-              title={i18n.i18n('Title_Cashout')}
-              onpressBack={() => navigation.goBack()}
-            />
+          <View style={Styles.topContainer}>
+            <Text style={{ color: '#808080' }}>{i18n.i18n('Text_Reciever')}</Text>
+            <Text style={{ color: '#000000', fontWeight: '500' }}>01743620841</Text>
+          </View>
 
-            <View style={Styles.topContainer}>
-              <Text style={{ color: '#808080' }}>{i18n.i18n('Text_Reciever')}</Text>
-              <Text style={{ color: '#000000', fontWeight: '500' }}>01743620841</Text>
-            </View>
-
-            <View style={Styles.amountContainer}>
-              <Text style={{ color: '#808080' }}>{i18n.i18n('Text_Amount')}</Text>
-              <View style={Styles.amount}>
-                <Text style={{ color: disabled ? '#808080' : '#000000', fontWeight: '700', fontSize: 22.5 }}>৳</Text>
-                <TextInput
-                  style={[{ color: disabled ? '#808080' : '#4285F4', }, Styles.amountText]}
-                  inputMode='numeric'
-                  placeholder='0'
-                  placeholderTextColor={'#808080'}
-                  value={amount}
-                  onChangeText={(text) => setAmount(text.replace(/^0*/, ''))}
-                />
-              </View>
+          <View style={Styles.amountContainer}>
+            <Text style={{ color: '#808080' }}>{i18n.i18n('Text_Amount')}</Text>
+            <View style={Styles.amount}>
+              <Text style={{ color: disabled ? '#808080' : '#000000', fontWeight: '700', fontSize: 22.5 }}>৳</Text>
+              <TextInput
+                style={[{ color: disabled ? '#808080' : '#4285F4', }, Styles.amountText]}
+                inputMode='numeric'
+                placeholder='0'
+                placeholderTextColor={'#808080'}
+                value={amount}
+                onChangeText={(text) => setAmount(text.replace(/^0*/, ''))}
+              />
             </View>
           </View>
 
@@ -76,8 +73,9 @@ const Styles = StyleSheet.create({
     width: '100%',
     flex: 1,
     backgroundColor: '#FFFFFF',
-    // borderWidth: 10
-    justifyContent: 'space-between',
+    position: 'relative',
+    // // borderWidth: 10
+    // justifyContent: 'space-between',
   },
 
   topContainer: {
@@ -122,6 +120,9 @@ const Styles = StyleSheet.create({
   },
 
   bottomButtonParent: {
+    position: 'absolute',
+    bottom: 0,
+    right: 0,
     alignItems: 'flex-end',
     padding: 8
   },

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, Platform } from 'react-native';
 import Header from '../../component/Header/Header';
 import i18n from '../../utils/i18n/i18n';
 import PaymentNumberInput from '../../component/TextInputs/PaymentNumberInput';
@@ -30,12 +30,9 @@ const PaymentRequest = ({ navigation, route }) => {
       <View style={{ paddingHorizontal: 12 }}>
         <Text style={Styles.reqText}>{i18n.i18n("Text_Request")}</Text>
 
-        {
-          [1, 2, 3].map((item, index) => (
-            <MoneyRequestCard key={index} />
-          ))
-        }
-
+        {[1, 2, 3].map((item, index) => (
+          <MoneyRequestCard key={index} />
+        ))}
       </View>
     </View>
   );

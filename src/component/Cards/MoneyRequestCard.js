@@ -2,9 +2,9 @@ import React from 'react';
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import ThreeDot from '../../assets/svg/ThreeDot';
 
-const MoneyRequestCard = () => {
+const MoneyRequestCard = ({ style }) => {
   return (
-    <View style={Styles.parent}>
+    <View style={[Styles.parent, style]}>
       <View>
         <Text style={Styles.amount}>৳ ৫০০</Text>
         <Text style={Styles.phone}>01743620841</Text>

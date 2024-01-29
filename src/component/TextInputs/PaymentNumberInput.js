@@ -6,9 +6,10 @@ const PaymentNumberInput = ({
   value,
   setValue,
   onPressIcon,
+  style
 }) => {
   return (
-    <View style={Styles.inputContainer}>
+    <View style={[Styles.inputContainer, style]}>
       <TextInput
         style={Styles.input}
         inputMode='numeric'
