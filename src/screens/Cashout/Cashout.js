@@ -50,15 +50,13 @@ const Cashout = ({
             </View>
           </View>
 
-          <View style={Styles.bottomButtonParent}>
-            <TouchableOpacity
-              onPress={() => {
-                disabled ? null : navigation.navigate('CashoutForm', { amount })
-              }}
-              style={[Styles.bottomButton, { backgroundColor: disabled ? '#808080' : '#4285F4', }]}>
-              <RightArrow />
-            </TouchableOpacity>
-          </View>
+          <TouchableOpacity
+            onPress={() => {
+              disabled ? null : navigation.navigate('CashoutForm', { amount })
+            }}
+            style={[Styles.bottomButton, { backgroundColor: disabled ? '#808080' : '#4285F4', }]}>
+            <RightArrow />
+          </TouchableOpacity>
 
         </View>
       </DismissKeyboard>
@@ -119,15 +117,10 @@ const Styles = StyleSheet.create({
     height: 50,
   },
 
-  bottomButtonParent: {
-    position: 'absolute',
-    bottom: 0,
-    right: 0,
-    alignItems: 'flex-end',
-    padding: 8
-  },
-
   bottomButton: {
+    position: 'absolute',
+    bottom: 8,
+    right: 8,
     width: 48,
     height: 48,
     borderRadius: 24,

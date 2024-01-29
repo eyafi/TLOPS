@@ -2,13 +2,18 @@ import React from 'react';
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import ThreeDot from '../../assets/svg/ThreeDot';
 
-const MoneyRequestCard = ({ style }) => {
+const MoneyRequestCard = ({
+  amount,
+  phone,
+  date,
+  style
+}) => {
   return (
     <View style={[Styles.parent, style]}>
       <View>
-        <Text style={Styles.amount}>৳ ৫০০</Text>
-        <Text style={Styles.phone}>01743620841</Text>
-        <Text style={Styles.date}>31 Oct - 08:00 PM </Text>
+        <Text style={Styles.amount}>৳ {amount}</Text>
+        <Text style={Styles.phone}>{phone}</Text>
+        <Text style={Styles.date}>{date}</Text>
       </View>
 
       <View style={{ justifyContent: 'space-between', alignItems: 'flex-end' }}>
@@ -31,7 +36,7 @@ const Styles = StyleSheet.create({
     borderRadius: 8,
     padding: 19,
     backgroundColor: '#fff',
-    width: '100%',
+    // width: '100%',
     flexDirection: 'row',
     justifyContent: 'space-between',
     marginBottom: 10,
