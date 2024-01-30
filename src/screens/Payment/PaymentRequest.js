@@ -18,7 +18,8 @@ const PaymentRequest = ({ navigation, route }) => {
     setLoading(true);
     let loadingDataTimeout;
     const fetchData = () => {
-      setData(RequestData.slice(0, initialIndex + 10));
+      let newData = [...data, ...RequestData.slice(initialIndex, initialIndex + 10)];
+      setData(newData);
       setLoading(false);
     };
     loadingDataTimeout = setTimeout(fetchData, 500);
